@@ -19,10 +19,21 @@ public class Library
 	{
 		System.out.println("Books in Library:   " + book);
 	}
-	public void removeBook(String bookName) {
-		if (book.remove(bookName)) {
+	
+	public boolean searchBook(String bookName) 
+	{
+		return book.contains(bookName);
+	}
+	
+	
+	public void removeBook(String bookName) 
+	{
+		if (book.remove(bookName)) 
+		{
 			System.out.println(bookName + " removed from library.");
-		} else {
+		}
+		else
+		{
 			System.out.println(bookName + " not found in library.");
 		}
 	}
